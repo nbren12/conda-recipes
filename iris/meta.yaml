@@ -1,0 +1,40 @@
+package:
+  name: iris
+  version: 1.6.0
+source:
+  fn:  v1.6.0.tar.gz
+  url: https://github.com/SciTools/iris/archive/v1.6.0.tar.gz
+  md5: 24c2d55758325a8f05aadf99748c0d2a
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - numpy
+    - scipy   
+    - udunits2
+    - netcdf4
+    - pyke
+    - cartopy   
+    - nose
+    - setuptools
+  run:
+    - python
+    - numpy
+    - scipy   
+    - udunits2
+    - netcdf4
+    - pyke
+    - cartopy   
+    - shapely
+    - matplotlib
+
+test:
+  imports:
+    - iris
+
+about:
+  home: http://scitools.org.uk/iris
+  license: Open Government License (UK)
