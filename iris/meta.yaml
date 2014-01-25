@@ -33,7 +33,6 @@ requirements:
 
 test:
   imports:
-    - iris
 
 about:
   home: http://scitools.org.uk/iris
