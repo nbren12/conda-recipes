@@ -1,0 +1,81 @@
+package:
+  name: sumatra
+  version: !!str 0.5.2
+
+source:
+  fn: Sumatra-0.5.2.tar.gz
+  url: http://pypi.python.org/packages/source/S/Sumatra/Sumatra-0.5.2.tar.gz
+  md5: 0814e6e0b6ab83df501e28b242cdf18a
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  #preserve_egg_dir: True
+  #entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - sumatra = sumatra:main
+    #
+    # Would create an entry point called sumatra that calls sumatra.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - django
+    - django-tagging
+    - httplib2
+    - simplejson
+    - docutils
+
+  run:
+    - python
+    - django
+    - django-tagging
+    - httplib2
+    - simplejson
+    - docutils
+
+test:
+  # Python imports
+  imports:
+    - sumatra.external
+    - sumatra.recordstore
+    - sumatra.publishing.sphinxext
+    - sumatra.versioncontrol
+    - sumatra.publishing
+    - sumatra.recordstore.django_store
+    - sumatra.dependency_finder
+    - sumatra.web
+    - sumatra.datastore
+    - sumatra.web.templatetags
+    - sumatra
+    - sumatra.external.NeuroTools
+    - sumatra.publishing.latex
+
+  #commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://neuralensemble.org/sumatra/
+  license: 
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
