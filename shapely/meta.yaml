@@ -29,9 +29,11 @@ requirements:
   build:
     - python
     - setuptools
+    - geos
 
   run:
     - python
+    - geos
 
 test:
   # Python imports
