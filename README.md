@@ -7,3 +7,5 @@ conda install -c nbren12 iris
 ```
 
 Or clone this repo and build manually using `conda build`.
+
+Afterwards, if `libudunits2.so` is not installed systemwide, you will need to tell it where to find its XML file. You can do this using a environmental variable `export UDUNITS2_XML_PATH=<PREFIX>/share/udunits/udunits2.xml`
