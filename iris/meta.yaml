@@ -12,7 +12,6 @@ build:
 requirements:
   build:
     - python
-    - numpy
     - scipy   
     - udunits2
     - netcdf4
@@ -22,7 +21,6 @@ requirements:
     - setuptools
   run:
     - python
-    - numpy
     - scipy   
     - udunits2
     - netcdf4
