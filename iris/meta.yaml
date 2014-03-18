@@ -16,7 +16,8 @@ requirements:
     - udunits2
     - netcdf4
     - pyke
-    - cartopy   
+    - cartopy
+    - geos
     - nose
     - setuptools
   run:
@@ -25,6 +26,7 @@ requirements:
     - udunits2
     - netcdf4
     - pyke
+    - geos
     - cartopy   
     - shapely
     - matplotlib
