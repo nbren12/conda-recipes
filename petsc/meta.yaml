@@ -1,0 +1,23 @@
+package:
+  name: petsc
+  version: 3.6.1
+
+source:
+  fn: petsc-lite-3.6.1.tar.gz
+  url: http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/petsc-lite-3.6.1.tar.gz # [linux]
+  # md5: d707336a98d7cb31d843804d020edc94
+
+build:
+  number: 2
+
+requirements:
+  build:
+    - python
+  run:
+
+test:
+  requires:
+
+about:
+  home: http://www.mcs.anl.gov/petsc/
+  license: Public Domain
