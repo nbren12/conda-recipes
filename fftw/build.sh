@@ -4,10 +4,29 @@
 FFTWCONF_ARGS="CC=mpicc CXX=mpicxx F77=mpif90 \
                MPICC=mpicc MPICXX=mpicxx \
                --enable-shared \
-               --enable-mpi --enable-threads"
+               --enable-mpi --enable-threads --prefix=$PREFIX"
 
-./configure --prefix=$PREFIX ${FFTWCONF_ARGS} 
+CONFIGURE=./configure
 
-make 
+# Single precision (fftw libraries have "f" suffix)
+$CONFIGURE --enable-float --enable-sse --enable-avx ${FFTWCONF_ARGS}
+make
 make install
-make clean 
+
+# Long double precision (fftw libraries have "l" suffix)
+$CONFIGURE --enable-long-double ${FFTWCONF_ARGS}
+make
+make install
+
+# Double precision (fftw libraries have no precision suffix)
+$CONFIGURE --enable-sse2 --enable-avx ${FFTWCONF_ARGS}
+make
+make install
+
+# Test suite
+# tests are performed during building as they are not available in the
+# installed package.
+# Additional tests can be run with make smallcheck and make bigcheck
+cd tests && make check-local
+# Additional tests can be run using the next two lines
+#make smallcheck
