@@ -27,6 +27,6 @@ make install
 # tests are performed during building as they are not available in the
 # installed package.
 # Additional tests can be run with make smallcheck and make bigcheck
-cd tests && make check-local
+# cd tests && make check-local
 # Additional tests can be run using the next two lines
 #make smallcheck
