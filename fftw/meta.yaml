@@ -9,9 +9,7 @@ source:
 
 requirements:
   build:
-    - mpich2
   run:
-    - mpich2
 about:
   home: http://fftw.org
   license: GNU General Public License (GPL)

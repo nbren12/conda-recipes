@@ -1,0 +1,24 @@
+package:
+  name: hypre
+  version: 2.10.1
+
+source:
+  fn: hypre-2.10.1-babel.tar.gz
+  url: http://computation.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods/download/hypre-2.10.1-babel.tar.gz
+  md5: 80e835a052ffa70c45bdc9023fc55777
+
+build:
+  number: 2
+
+requirements:
+  build:
+    - mpich
+  run:
+    - mpich
+
+test:
+  requires:
+
+about:
+  home: http://www.mcs.anl.gov/petsc/
+  license: Public Domain
